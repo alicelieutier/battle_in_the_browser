@@ -5,16 +5,16 @@ It intents to build a simple Ruby with Sinatra app to play around with forms.
 
 ## Install
 
-1 - clone the repo
-2 - run `bundle`
-3 - if you want to use shotgun, then you'll need to generate a session secret that will stay the same across restarts of the server:
+1. clone the repo
+2. run `bundle`
+3. if you want to use shotgun, then [you'll need](https://groups.google.com/forum/#!topic/sinatrarb/pUFSoyQXyQs) to [generate a session secret](http://sinatrarb.com/intro.html) that will stay the same across restarts of the server. Here's one way:
   ```
   $> export SESSION_SECRET=`head -n 4096 /dev/urandom | openssl sha1`
 
   ```
-  you might want to add that line to your `.bashrc` or `.profile`.
-  (More about session secrets)[http://sinatrarb.com/intro.html] (in sinatra)[https://groups.google.com/forum/#!topic/sinatrarb/pUFSoyQXyQs]
-4 - run the app by typing `shotgun` or `rackup`
+  You might also want to add that line to your `.bashrc` or `.profile`.
+  
+4. run the app by typing `shotgun` or `rackup`
 
 ## User stories
 
