@@ -1,5 +1,7 @@
-require 'sinatra'
+require "sinatra/base"
 
-get '/' do
-  "Hello World"
+class Battle < Sinatra::Base
+  get '/' do
+    "Welcome to battle"
+  end
 end
