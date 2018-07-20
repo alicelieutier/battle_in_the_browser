@@ -1,10 +1,11 @@
-describe "I see my first page", type: :feature do
-  it "shows 'Welcome to Battle'" do
+describe "Two players can sign in", type: :feature do
+  it "shows a form for players to enter their names" do
     visit '/'
-    expect(page).to have_content 'Welcome to battle'
-  end
-  it "shows a form for players" do
-    visit '/'
-    find_field('Player 1').visible?
+    within("form#players") do
+      fill_in 'Player 1', with: 'Alice'
+      fill_in 'Player 2', with: 'Bob'
+      find_button('Play!').click
+    end
+    expect(page).to have_content 'Alice VS. Bob'
   end
 end
